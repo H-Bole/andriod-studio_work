@@ -20,6 +20,7 @@ public class Home_pageFragment extends BaseFragment {
 
     @Override
     public int getLayoutResId() {
+//        加载首页xml
         return R.layout.fragment_home_page;
     }
 
@@ -31,9 +32,11 @@ public class Home_pageFragment extends BaseFragment {
 
     @Override
     public void initData() {
+//        首页下的fragment
         List<Fragment> fragments = new ArrayList<>();
         fragments.add(new RecommendFragment());
         fragments.add(new AppRankingFragment());
+        fragments.add(new TestFragment());
 
         FragmentPagerAdapter adapter = new FragmentPagerAdapter(this, fragments);
         viewPager.setAdapter(adapter);
@@ -46,39 +49,48 @@ public class Home_pageFragment extends BaseFragment {
                 case 1:
                     tab.setText("应用榜");
                     break;
+                case 2:
+                    tab.setText("测试");
+                    break;
             }
         }).attach();
     }
-
+//以下是内部类（注意使用公共类）
     public static class RecommendFragment extends BaseFragment {
         @Override
         public int getLayoutResId() {
             return R.layout.fragment_recommend;
         }
-
         @Override
         public void initView(View rootView) {
             // 初始化视图组件
         }
-
         @Override
         public void initData() {
             // 加载数据
         }
     }
-
     public static class AppRankingFragment extends BaseFragment {
         @Override
         public int getLayoutResId() {
             return R.layout.fragment_app_ranking;
         }
-
         @Override
         public void initView(View rootView) {
             // 初始化视图组件
         }
-
         @Override
+        public void initData() {
+            // 加载数据
+        }
+    }
+    public static class TestFragment extends BaseFragment {
+        public int getLayoutResId() {
+            return R.layout.fragment_app_test;
+        }
+        public void initView(View rootView) {
+            // 初始化视图组件
+        }
         public void initData() {
             // 加载数据
         }
