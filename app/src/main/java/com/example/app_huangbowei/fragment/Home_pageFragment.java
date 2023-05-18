@@ -66,9 +66,10 @@ public class Home_pageFragment extends BaseFragment {
     public void initData() {
 //        首页下的fragment
         List<Fragment> fragments = new ArrayList<>();
-        fragments.add(new RecommendFragment());
-        fragments.add(new AppRankingFragment());
-        fragments.add(new TestFragment());
+        fragments.add(new SummarizeFragment());
+        fragments.add(new SimpknowFragment());
+        fragments.add(new ActicityFragment());
+        fragments.add(new TicketFragment());
 
         FragmentPagerAdapter adapter = new FragmentPagerAdapter(this, fragments);
         viewPager.setAdapter(adapter);
@@ -76,13 +77,16 @@ public class Home_pageFragment extends BaseFragment {
         new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
             switch (position) {
                 case 0:
-                    tab.setText("推荐");
+                    tab.setText("概况");
                     break;
                 case 1:
-                    tab.setText("应用榜");
+                    tab.setText("初识度假区");
                     break;
                 case 2:
-                    tab.setText("测试");
+                    tab.setText("精彩活动");
+                    break;
+                case 3:
+                    tab.setText("门票预定");
                     break;
             }
         }).attach();
@@ -143,7 +147,7 @@ public class Home_pageFragment extends BaseFragment {
 
 
     //以下是内部类（注意使用公共类）
-    public static class RecommendFragment extends BaseFragment {
+    public static class SummarizeFragment extends BaseFragment {
         @Override
         public int getLayoutResId() {
             return R.layout.fragment_recommend;
@@ -157,7 +161,7 @@ public class Home_pageFragment extends BaseFragment {
             // 加载数据
         }
     }
-    public static class AppRankingFragment extends BaseFragment {
+    public static class SimpknowFragment extends BaseFragment {
         @Override
         public int getLayoutResId() {
             return R.layout.fragment_app_ranking;
@@ -171,7 +175,7 @@ public class Home_pageFragment extends BaseFragment {
             // 加载数据
         }
     }
-    public static class TestFragment extends BaseFragment {
+    public static class ActicityFragment extends BaseFragment {
         public int getLayoutResId() {
             return R.layout.fragment_app_test;
         }
@@ -183,5 +187,16 @@ public class Home_pageFragment extends BaseFragment {
         }
     }
 
+    public static class TicketFragment extends BaseFragment {
+        public int getLayoutResId() {
+            return R.layout.fragment_app_test2;
+        }
+        public void initView(View rootView) {
+            // 初始化视图组件
+        }
+        public void initData() {
+            // 加载数据
+        }
+    }
 }
 
