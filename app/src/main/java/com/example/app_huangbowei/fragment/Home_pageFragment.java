@@ -2,6 +2,7 @@ package com.example.app_huangbowei.fragment;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -32,6 +33,8 @@ public class Home_pageFragment extends BaseFragment {
 
     private boolean isExpanded = true; // 轮播图是否展开标志位
 
+
+
     @Override
     public int getLayoutResId() {
 //        加载首页xml
@@ -45,6 +48,22 @@ public class Home_pageFragment extends BaseFragment {
         bannerContainer = rootView.findViewById(R.id.banner_container);
         bannerViewPager = rootView.findViewById(R.id.lunbotu);
         Button btnToggle = rootView.findViewById(R.id.btn_toggle);
+
+        //    轮播图隐藏
+        Handler handler = new Handler();
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                if (isExpanded) {
+                    bannerContainer.setVisibility(View.GONE);
+                    btnToggle.setText("展开");
+                    isExpanded = !isExpanded;
+                }
+            }
+        };
+        // 设置10秒后自动隐藏轮播图
+        handler.postDelayed(runnable, 10000);
+
         btnToggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,10 +71,16 @@ public class Home_pageFragment extends BaseFragment {
                     // 隐藏轮播图
                     bannerContainer.setVisibility(View.GONE);
                     btnToggle.setText("展开");
+
+                    // 取消自动隐藏
+                    handler.removeCallbacks(runnable);
                 } else {
                     // 显示轮播图
                     bannerContainer.setVisibility(View.VISIBLE);
                     btnToggle.setText("收起");
+
+                    // 重新设置10秒后自动隐藏轮播图
+                    handler.postDelayed(runnable, 10000);
                 }
                 isExpanded = !isExpanded;
             }
