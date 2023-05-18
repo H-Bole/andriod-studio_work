@@ -1,8 +1,18 @@
 package com.example.app_huangbowei.fragment;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.app_huangbowei.R;
@@ -17,6 +27,10 @@ import java.util.List;
 public class Home_pageFragment extends BaseFragment {
     private TabLayout tabLayout;
     private ViewPager2 viewPager;
+    private RelativeLayout bannerContainer;
+    private ViewPager bannerViewPager;
+
+    private boolean isExpanded = true; // 轮播图是否展开标志位
 
     @Override
     public int getLayoutResId() {
@@ -28,6 +42,24 @@ public class Home_pageFragment extends BaseFragment {
     public void initView(View rootView) {
         tabLayout = rootView.findViewById(R.id.tab_layout);
         viewPager = rootView.findViewById(R.id.view_pager);
+        bannerContainer = rootView.findViewById(R.id.banner_container);
+        bannerViewPager = rootView.findViewById(R.id.view_pager1);
+        Button btnToggle = rootView.findViewById(R.id.btn_toggle);
+        btnToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isExpanded) {
+                    // 隐藏轮播图
+                    bannerContainer.setVisibility(View.GONE);
+                    btnToggle.setText("展开");
+                } else {
+                    // 显示轮播图
+                    bannerContainer.setVisibility(View.VISIBLE);
+                    btnToggle.setText("收起");
+                }
+                isExpanded = !isExpanded;
+            }
+        });
     }
 
     @Override
@@ -54,8 +86,63 @@ public class Home_pageFragment extends BaseFragment {
                     break;
             }
         }).attach();
+
+        // 轮播图数据
+        List<Drawable> bannerData = new ArrayList<>();
+        bannerData.add(getResources().getDrawable(R.drawable.fg1));
+        bannerData.add(getResources().getDrawable(R.drawable.fg2));
+        bannerData.add(getResources().getDrawable(R.drawable.fg1));
+
+
+        BannerPagerAdapter bannerPagerAdapter = new BannerPagerAdapter(getActivity(), bannerData);
+        bannerViewPager.setAdapter(bannerPagerAdapter);
+        bannerViewPager.setOffscreenPageLimit(bannerData.size());
     }
-//以下是内部类（注意使用公共类）
+
+    // 轮播图PagerAdapter
+    static class BannerPagerAdapter extends PagerAdapter {
+        private Context mContext;
+        private List<Drawable> mData;
+
+        public BannerPagerAdapter(Context context, List<Drawable> data) {
+            mContext = context;
+            mData = data;
+        }
+
+        public void setData(List<Drawable> data) {
+            mData = data;
+            notifyDataSetChanged();
+        }
+
+        @Override
+        public int getCount() {
+            return mData.size();
+        }
+
+        @NonNull
+        @Override
+        public Object instantiateItem(@NonNull ViewGroup container, int position) {
+            ImageView imageView = new ImageView(mContext);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imageView.setImageDrawable(mData.get(position));
+            container.addView(imageView);
+            return imageView;
+        }
+
+        @Override
+        public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+            container.removeView((View) object);
+        }
+
+        @Override
+        public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
+            return view == object;
+        }
+    }
+
+
+
+    //以下是内部类（注意使用公共类）
     public static class RecommendFragment extends BaseFragment {
         @Override
         public int getLayoutResId() {
