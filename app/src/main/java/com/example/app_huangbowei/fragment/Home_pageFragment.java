@@ -2,7 +2,6 @@ package com.example.app_huangbowei.fragment;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -41,10 +40,10 @@ public class Home_pageFragment extends BaseFragment {
 
     @Override
     public void initView(View rootView) {
-        tabLayout = rootView.findViewById(R.id.tab_layout);
-        viewPager = rootView.findViewById(R.id.view_pager);
+        tabLayout = rootView.findViewById(R.id.category);
+        viewPager = rootView.findViewById(R.id.home_viewpager);
         bannerContainer = rootView.findViewById(R.id.banner_container);
-        bannerViewPager = rootView.findViewById(R.id.view_pager1);
+        bannerViewPager = rootView.findViewById(R.id.lunbotu);
         Button btnToggle = rootView.findViewById(R.id.btn_toggle);
         btnToggle.setOnClickListener(new View.OnClickListener() {
             @Override
