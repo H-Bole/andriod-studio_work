@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -87,11 +88,11 @@ public class Home_pageFragment extends BaseFragment {
             }
         }).attach();
 
-        // 轮播图数据
+        // 轮播图数据（更新）
         List<Drawable> bannerData = new ArrayList<>();
-        bannerData.add(getResources().getDrawable(R.drawable.fg1));
-        bannerData.add(getResources().getDrawable(R.drawable.fg2));
-        bannerData.add(getResources().getDrawable(R.drawable.fg1));
+        bannerData.add(ContextCompat.getDrawable(getActivity(), R.drawable.fg1));
+        bannerData.add(ContextCompat.getDrawable(getActivity(), R.drawable.fg2));
+        bannerData.add(ContextCompat.getDrawable(getActivity(), R.drawable.fg1));
 
 
         BannerPagerAdapter bannerPagerAdapter = new BannerPagerAdapter(getActivity(), bannerData);
