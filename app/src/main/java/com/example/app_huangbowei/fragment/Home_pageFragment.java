@@ -182,7 +182,7 @@ public class Home_pageFragment extends BaseFragment {
     public static class SummarizeFragment extends BaseFragment {
         @Override
         public int getLayoutResId() {
-            return R.layout.fragment_recommend;
+            return R.layout.fragment_summarize;
         }
         @Override
         public void initView(View rootView) {
@@ -201,7 +201,7 @@ public class Home_pageFragment extends BaseFragment {
         RecyclerView recyclerView ;
         @Override
         public int getLayoutResId() {
-            return R.layout.fragment_app_ranking;
+            return R.layout.fragment_simpknow;
         }
         @Override
         public void initView(View rootView) {
@@ -357,7 +357,7 @@ public class Home_pageFragment extends BaseFragment {
 //    精彩活动
     public static class ActicityFragment extends BaseFragment {
         public int getLayoutResId() {
-            return R.layout.fragment_app_test;
+            return R.layout.fragment_acticity;
         }
         public void initView(View rootView) {
             // 初始化视图组件
@@ -369,7 +369,7 @@ public class Home_pageFragment extends BaseFragment {
 
     public static class TicketFragment extends BaseFragment {
         public int getLayoutResId() {
-            return R.layout.fragment_app_test2;
+            return R.layout.fragment_ticket;
         }
         public void initView(View rootView) {
             // 初始化视图组件
