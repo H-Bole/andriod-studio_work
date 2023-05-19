@@ -1,4 +1,4 @@
-package com.example.app_huangbowei.fragment;
+package com.example.app_huangbowei.Adpter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
