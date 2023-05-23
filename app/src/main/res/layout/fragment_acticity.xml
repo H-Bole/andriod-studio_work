@@ -15,24 +15,200 @@
             android:orientation="vertical" >
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/button"
+                <ImageView
+                    android:id="@+id/activity1_img"
+                    android:layout_width="190dp"
+                    android:layout_height="146dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/activity_title1" />
+
+                <TextView
+                    android:id="@+id/activity1_text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Button"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="30dp" />
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="24dp"
+                    android:text="都江堰摇滚马拉松"
+                    android:textColor="#020202"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/activity1_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/activity1_text2"
+                    android:layout_width="144dp"
+                    android:layout_height="37dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="活动介绍：摇滚马拉松在都江堰激情开跑"
+                    android:textColor="#020202"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/activity1_text1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:layout_editor_absoluteX="237dp"
-                    tools:layout_editor_absoluteY="0dp"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    android:id="@+id/activity2_img"
+                    android:layout_width="190dp"
+                    android:layout_height="146dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/activity_title2" />
+
+                <TextView
+                    android:id="@+id/activity2_text1"
+                    android:layout_width="168dp"
+                    android:layout_height="68dp"
+                    android:layout_marginTop="16dp"
+                    android:text="直击放水节现场！一场穿越2000多年的狂欢，亮点都在这儿了"
+                    android:textColor="#020202"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toEndOf="@+id/activity2_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/activity3_img"
+                    android:layout_width="190dp"
+                    android:layout_height="146dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/activity_title3" />
+
+                <TextView
+                    android:id="@+id/activity3_text1"
+                    android:layout_width="165dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="16dp"
+                    android:text="都江堰代表团参加2018年世界运河城市论坛~"
+                    android:textColor="#020202"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/activity3_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/activity3_text2"
+                    android:layout_width="144dp"
+                    android:layout_height="37dp"
+                    android:layout_marginBottom="36dp"
+                    android:text="活动时间：2018-10-13至2018-10-13"
+                    android:textColor="#020202"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/activity3_text1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/activity4_img"
+                    android:layout_width="190dp"
+                    android:layout_height="146dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/activity_title4" />
+
+                <TextView
+                    android:id="@+id/activity4_text1"
+                    android:layout_width="172dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="16dp"
+                    android:text="这场道系旅行让你一入青城忘凡尘，快来祈福养生、仙山小憩..."
+                    android:textColor="#020202"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/activity4_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/activity4_text2"
+                    android:layout_width="144dp"
+                    android:layout_height="37dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="活动时间：2018-10-12至2018-10-12"
+                    android:textColor="#020202"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/activity4_text1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/activity5_img"
+                    android:layout_width="190dp"
+                    android:layout_height="146dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/acticity_title5" />
+
+                <TextView
+                    android:id="@+id/activity5_text1"
+                    android:layout_width="172dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="16dp"
+                    android:text="重阳登高去哪儿？都江堰这4个登高好去处，秋意正浓，全家出游上翠微~"
+                    android:textColor="#020202"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/activity5_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/activity5_text2"
+                    android:layout_width="144dp"
+                    android:layout_height="37dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="活动时间：2018-10-15至2018-10-15"
+                    android:textColor="#020202"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/activity5_text1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity_end"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/end_text"
+                    android:layout_width="78dp"
+                    android:layout_height="19dp"
+                    android:gravity="center_horizontal"
+                    android:text="滑到底啦！"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

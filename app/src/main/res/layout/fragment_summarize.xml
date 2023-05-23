@@ -34,8 +34,24 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="499dp"
                 app:srcCompat="@drawable/home_gaikuo" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity_end"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/end_text"
+                    android:layout_width="78dp"
+                    android:layout_height="19dp"
+                    android:gravity="center_horizontal"
+                    android:text="滑到底啦！"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
