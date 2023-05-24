@@ -9,9 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
-import com.example.app_huangbowei.R;
-
-public class Eat extends AppCompatActivity {
+public class Tourism_Eat extends AppCompatActivity {
     private ScrollView scrollView;
     private LinearLayout linearLayout;
     private ImageView imageView12, imageView13, imageView14, imageView15, imageView16;

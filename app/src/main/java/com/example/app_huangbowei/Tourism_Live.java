@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Live extends AppCompatActivity {
+public class Tourism_Live extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.app_huangbowei.fragment.User_centerFragment;
 
-public class LoginActivity extends AppCompatActivity {
+public class User_LoginActivity extends AppCompatActivity {
 
     private EditText accountEditText;
     private EditText passwordEditText;
@@ -43,14 +43,14 @@ public class LoginActivity extends AppCompatActivity {
                     editor.apply();
 
                     // 返回状态和账号到User_centerFragment中
-                    Intent intent = new Intent(LoginActivity.this, User_centerFragment.class);
+                    Intent intent = new Intent(User_LoginActivity.this, User_centerFragment.class);
                     intent.putExtra("account", account);
                     intent.putExtra("nickname", "已登录");
                     setResult(RESULT_OK, intent);
-                    Toast.makeText(LoginActivity.this, "登录成功！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(User_LoginActivity.this, "登录成功！", Toast.LENGTH_LONG).show();
                     finish();
                 } else {
-                    Toast.makeText(LoginActivity.this, "账号或密码错误，请重新输入！", Toast.LENGTH_LONG).show();
+                    Toast.makeText(User_LoginActivity.this, "账号或密码错误，请重新输入！", Toast.LENGTH_LONG).show();
                 }
             }
         });

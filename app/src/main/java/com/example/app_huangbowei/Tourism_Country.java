@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Amusement extends AppCompatActivity {
+public class Tourism_Country extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tourism_amusement);
+        setContentView(R.layout.tourism_country);
         getSupportActionBar().hide();
     }
 }

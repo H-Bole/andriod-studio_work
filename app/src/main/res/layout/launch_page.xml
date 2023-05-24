@@ -40,7 +40,7 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/btn_shape"
             android:forceDarkAllowed="false"
-            android:text="j进入都江堰旅游程序"
+            android:text="进入都江堰旅游程序"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

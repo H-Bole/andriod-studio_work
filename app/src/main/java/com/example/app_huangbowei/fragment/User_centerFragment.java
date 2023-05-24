@@ -5,7 +5,6 @@ import static android.app.Activity.RESULT_OK;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -15,11 +14,10 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.Nullable;
 
-import com.example.app_huangbowei.LoginActivity;
+import com.example.app_huangbowei.User_LoginActivity;
 import com.example.app_huangbowei.R;
-import com.example.app_huangbowei.RegisterActivity;
+import com.example.app_huangbowei.User_RegisterActivity;
 
 public class User_centerFragment extends BaseFragment {
     public TextView nicknameTextView;
@@ -70,7 +68,7 @@ public class User_centerFragment extends BaseFragment {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                Intent intent = new Intent(getActivity(), User_LoginActivity.class);
                 loginLauncher.launch(intent);
             }
         });
@@ -78,7 +76,7 @@ public class User_centerFragment extends BaseFragment {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), RegisterActivity.class);
+                Intent intent = new Intent(getActivity(), User_RegisterActivity.class);
                 registerLauncher.launch(intent);
             }
         });

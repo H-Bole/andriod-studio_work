@@ -27,7 +27,6 @@ import com.example.app_huangbowei.Adpter.FragmentPagerAdapter;
 import com.example.app_huangbowei.Adpter.MyAdapter;
 import com.example.app_huangbowei.Adpter.News;
 import com.example.app_huangbowei.R;
-import com.example.app_huangbowei.RegisterActivity;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 

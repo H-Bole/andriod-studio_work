@@ -4,12 +4,12 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.app_huangbowei.Amusement;
-import com.example.app_huangbowei.Country;
-import com.example.app_huangbowei.Live;
-import com.example.app_huangbowei.Play;
+import com.example.app_huangbowei.Tourism_Amusement;
+import com.example.app_huangbowei.Tourism_Country;
+import com.example.app_huangbowei.Tourism_Live;
+import com.example.app_huangbowei.Tourism_Play;
 import com.example.app_huangbowei.R;
-import com.example.app_huangbowei.Eat;
+import com.example.app_huangbowei.Tourism_Eat;
 
 //智游页
 
@@ -32,7 +32,7 @@ public class Smart_tourismFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 // 点击事件回调函数中启动目标Activity
-                Intent intent = new Intent(getActivity(), Eat.class);
+                Intent intent = new Intent(getActivity(), Tourism_Eat.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +42,7 @@ public class Smart_tourismFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 // 点击事件回调函数中启动目标Activity
-                Intent intent = new Intent(getActivity(), Live.class);
+                Intent intent = new Intent(getActivity(), Tourism_Live.class);
                 startActivity(intent);
             }
         });
@@ -51,7 +51,7 @@ public class Smart_tourismFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 // 点击事件回调函数中启动目标Activity
-                Intent intent = new Intent(getActivity(), Play.class);
+                Intent intent = new Intent(getActivity(), Tourism_Play.class);
                 startActivity(intent);
             }
         });
@@ -60,7 +60,7 @@ public class Smart_tourismFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 // 点击事件回调函数中启动目标Activity
-                Intent intent = new Intent(getActivity(), Amusement.class);
+                Intent intent = new Intent(getActivity(), Tourism_Amusement.class);
                 startActivity(intent);
             }
         });
@@ -69,7 +69,7 @@ public class Smart_tourismFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 // 点击事件回调函数中启动目标Activity
-                Intent intent = new Intent(getActivity(), Country.class);
+                Intent intent = new Intent(getActivity(), Tourism_Country.class);
                 startActivity(intent);
             }
         });
