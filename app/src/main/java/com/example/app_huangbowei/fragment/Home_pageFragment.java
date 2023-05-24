@@ -1,5 +1,6 @@
 package com.example.app_huangbowei.fragment;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
@@ -7,8 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -23,10 +27,12 @@ import com.example.app_huangbowei.Adpter.FragmentPagerAdapter;
 import com.example.app_huangbowei.Adpter.MyAdapter;
 import com.example.app_huangbowei.Adpter.News;
 import com.example.app_huangbowei.R;
+import com.example.app_huangbowei.RegisterActivity;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 //首页
@@ -395,11 +401,47 @@ public class Home_pageFragment extends BaseFragment {
     }
 
     public static class TicketFragment extends BaseFragment {
+        private TextView tvBirthday; // 出生年月日显示文本框
+        private Button btnSelectDate; // 选择日期按钮
+        // 定义日历变量，用于获取当前日期
+        private Calendar calendar;
+        private DatePickerDialog datePickerDialog;
+        private NumberPicker numberPicker;
         public int getLayoutResId() {
             return R.layout.fragment_ticket;
         }
         public void initView(View rootView) {
             // 初始化视图组件
+            //数量选择器
+            numberPicker = rootView.findViewById(R.id.number_picker);
+
+            // 设置数量选择器的最小值和最大值
+            numberPicker.setMinValue(1);
+            numberPicker.setMaxValue(10);
+            //时间选择器
+            tvBirthday = rootView.findViewById(R.id.tvBirthday);
+            btnSelectDate=rootView.findViewById(R.id.btnSelectDate);
+            // 初始化日历变量，获取当前日期
+            calendar = Calendar.getInstance();
+
+            // 设置出生年月日显示文本框的默认值为当前日期，格式为年/月/日
+            tvBirthday.setText(calendar.get(Calendar.YEAR) + "/" + (calendar.get(Calendar.MONTH) + 1) + "/" + calendar.get(Calendar.DAY_OF_MONTH));
+
+            // 设置选择日期按钮的点击事件监听器，弹出日期选择对话框，让用户选择出生年月日
+            btnSelectDate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // 初始化日期选择对话框，参数为当前活动、监听器、年、月、日
+                    datePickerDialog = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+                        @Override
+                        public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                            // 当用户选择日期后，更新出生年月日显示文本框的值，格式为年/月/日
+                            tvBirthday.setText(year + "/" + (month + 1) + "/" + dayOfMonth);
+                        }
+                    }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+                    datePickerDialog.show(); // 显示日期选择对话框
+                }
+            });
         }
         public void initData() {
             // 加载数据

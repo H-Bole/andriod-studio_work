@@ -1,17 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="203dp"
-        android:layout_height="116dp"
-        android:text="测试"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rg_gender">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="131dp"
+                android:layout_height="wrap_content"
+                android:text="选择购票日期" />
+
+            <TextView
+                android:id="@+id/tvBirthday"
+                android:layout_width="256dp"
+                android:layout_height="match_parent"
+                android:gravity="center|start"
+                android:text="日期栏"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnSelectDate"
+                android:layout_width="273dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_shape"
+                android:text="选择日期"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_ticket_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="门票类别" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_ticket_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_adult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:clickable="true"
+                android:text="成人票" />
+
+            <RadioButton
+                android:id="@+id/radio_student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学生票" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="数量" />
+
+        <NumberPicker
+            android:id="@+id/number_picker"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <TextView
+            android:id="@+id/tv_time_slot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="上午/下午" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_time_slot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_morning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="上午" />
+
+            <RadioButton
+                android:id="@+id/radio_afternoon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下午" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_remaining_tickets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="当前时间段剩余票量" />
+
+        <TextView
+            android:id="@+id/tv_remaining_tickets_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btn_book_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="预订门票" />
+
+    </LinearLayout>
+
+
+</ScrollView>
