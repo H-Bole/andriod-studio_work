@@ -28,7 +28,7 @@
                     android:id="@+id/btn_activity1"
                     android:layout_width="35dp"
                     android:layout_height="36dp"
-                    android:text="返回"
+                    android:background="@drawable/back1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

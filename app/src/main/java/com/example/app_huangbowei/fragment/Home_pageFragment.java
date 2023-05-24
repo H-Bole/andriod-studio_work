@@ -67,8 +67,8 @@ public class Home_pageFragment extends BaseFragment {
                 }
             }
         };
-        // 设置10秒后自动隐藏轮播图
-        handler.postDelayed(runnable, 10000);
+        // 设置6秒后自动隐藏轮播图
+        handler.postDelayed(runnable, 6000);
 
         btnToggle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,9 +124,9 @@ public class Home_pageFragment extends BaseFragment {
 
         // 轮播图数据（更新）
         List<Drawable> bannerData = new ArrayList<>();
-        bannerData.add(ContextCompat.getDrawable(getActivity(), R.drawable.fg1));
-        bannerData.add(ContextCompat.getDrawable(getActivity(), R.drawable.fg2));
-        bannerData.add(ContextCompat.getDrawable(getActivity(), R.drawable.fg1));
+        bannerData.add(ContextCompat.getDrawable(getActivity(), R.drawable.lunbo1));
+        bannerData.add(ContextCompat.getDrawable(getActivity(), R.drawable.lunbo2));
+        bannerData.add(ContextCompat.getDrawable(getActivity(), R.drawable.lunbo3));
 
 
         BannerPagerAdapter bannerPagerAdapter = new BannerPagerAdapter(getActivity(), bannerData);
@@ -324,13 +324,13 @@ public class Home_pageFragment extends BaseFragment {
                     "乘车地点：双流机场1号航站楼与2号航站楼之间（原支线航站楼出港厅）。线路、站点、时刻的调整以成都双流国际机场调度站公布信息为准，可查询成都双流国际机场官方网站。\n" +
                     "市区内有便捷的公共交通，乘公交车游客可以很方便地到达各个旅游景点。另外市区内有绿色无污染的出租车，价格便宜。如果你想领略市区内的风采，还可以乘坐人力三轮车。";
             List<News> newsList =new ArrayList<>();
-            News news1 = new News("地理",content1, R.drawable.fg1);
-            News news2 = new News("河流",content2, R.drawable.fg1);
-            News news3 = new News("历史",content3, R.drawable.fg1);
-            News news4 = new News("文化",content4, R.drawable.fg1);
-            News news5 = new News("民俗",content5, R.drawable.fg1);
-            News news6 = new News("乡村",content6, R.drawable.fg1);
-            News news7 = new News("旅游资源",content7, R.drawable.fg1);
+            News news1 = new News("地理",content1, R.drawable.simpknow_1);
+            News news2 = new News("河流",content2, R.drawable.simpknow_2);
+            News news3 = new News("历史",content3, R.drawable.simpknow_3);
+            News news4 = new News("文化",content4, R.drawable.simpknow_4);
+            News news5 = new News("民俗",content5, R.drawable.simpknow_5);
+            News news6 = new News("乡村",content6, R.drawable.simpknow_6);
+            News news7 = new News("旅游资源",content7, R.drawable.simpknow_7);
             newsList.add(news1);
             newsList.add(news2);
             newsList.add(news3);
