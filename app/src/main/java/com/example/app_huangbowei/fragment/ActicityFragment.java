@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import com.example.app_huangbowei.R;
 
-//    精彩活动
+// 精彩活动
 public class ActicityFragment extends BaseFragment {
     private ImageView imageView;
     private ImageView imageView2;
@@ -26,63 +26,21 @@ public class ActicityFragment extends BaseFragment {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 加载另一个布局
-                View view = LayoutInflater.from(getContext()).inflate(R.layout.activity_1, null);
-                ViewGroup rootView = (ViewGroup) getView().getParent();
-                rootView.addView(view);
-
-                // 添加返回按钮的点击事件
-                Button backButton = view.findViewById(R.id.btn_activity1);
-                backButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        // 返回原来的布局
-                        ViewGroup rootView = (ViewGroup) getView().getParent();
-                        rootView.removeViewAt(rootView.getChildCount() - 1);
-                    }
-                });
+                loadLayout(R.layout.activity_1, R.id.btn_activity1);
             }
         });
         imageView2 = rootView.findViewById(R.id.activity2_img);
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 加载另一个布局
-                View view = LayoutInflater.from(getContext()).inflate(R.layout.activity_2, null);
-                ViewGroup rootView = (ViewGroup) getView().getParent();
-                rootView.addView(view);
-
-                // 添加返回按钮的点击事件
-                Button backButton = view.findViewById(R.id.btn_activity2);
-                backButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        // 返回原来的布局
-                        ViewGroup rootView = (ViewGroup) getView().getParent();
-                        rootView.removeViewAt(rootView.getChildCount() - 1);
-                    }
-                });
+                loadLayout(R.layout.activity_2, R.id.btn_activity2);
             }
         });
         imageView3 = rootView.findViewById(R.id.activity3_img);
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 加载另一个布局
-                View view = LayoutInflater.from(getContext()).inflate(R.layout.activity_3, null);
-                ViewGroup rootView = (ViewGroup) getView().getParent();
-                rootView.addView(view);
-
-                // 添加返回按钮的点击事件
-                Button backButton = view.findViewById(R.id.btn_activity3);
-                backButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        // 返回原来的布局
-                        ViewGroup rootView = (ViewGroup) getView().getParent();
-                        rootView.removeViewAt(rootView.getChildCount() - 1);
-                    }
-                });
+                loadLayout(R.layout.activity_3, R.id.btn_activity3);
             }
         });
 
@@ -90,21 +48,7 @@ public class ActicityFragment extends BaseFragment {
         imageView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 加载另一个布局
-                View view = LayoutInflater.from(getContext()).inflate(R.layout.activity_4, null);
-                ViewGroup rootView = (ViewGroup) getView().getParent();
-                rootView.addView(view);
-
-                // 添加返回按钮的点击事件
-                Button backButton = view.findViewById(R.id.btn_activity4);
-                backButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        // 返回原来的布局
-                        ViewGroup rootView = (ViewGroup) getView().getParent();
-                        rootView.removeViewAt(rootView.getChildCount() - 1);
-                    }
-                });
+                loadLayout(R.layout.activity_4, R.id.btn_activity4);
             }
         });
 
@@ -112,28 +56,31 @@ public class ActicityFragment extends BaseFragment {
         imageView5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 加载另一个布局
-                View view = LayoutInflater.from(getContext()).inflate(R.layout.activity_5, null);
-                ViewGroup rootView = (ViewGroup) getView().getParent();
-                rootView.addView(view);
-
-                // 添加返回按钮的点击事件
-                Button backButton = view.findViewById(R.id.btn_activity5);
-                backButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        // 返回原来的布局
-                        ViewGroup rootView = (ViewGroup) getView().getParent();
-                        rootView.removeViewAt(rootView.getChildCount() - 1);
-                    }
-                });
+                loadLayout(R.layout.activity_5, R.id.btn_activity5);
             }
         });
 
     }
 
-
     public void initData() {
         // 加载数据
+    }
+
+    private void loadLayout(int layoutResId, int backButtonResId) {
+        // 加载另一个布局
+        View view = LayoutInflater.from(getContext()).inflate(layoutResId, null);
+        ViewGroup rootView = (ViewGroup) getView().getParent();
+        rootView.addView(view);
+
+        // 添加返回按钮的点击事件
+        Button backButton = view.findViewById(backButtonResId);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 返回原来的布局
+                ViewGroup rootView = (ViewGroup) getView().getParent();
+                rootView.removeViewAt(rootView.getChildCount() - 1);
+            }
+        });
     }
 }

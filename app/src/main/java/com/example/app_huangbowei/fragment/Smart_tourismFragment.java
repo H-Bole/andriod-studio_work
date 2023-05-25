@@ -19,6 +19,7 @@ public class Smart_tourismFragment extends BaseFragment {
     private ImageView imageView2;
     private ImageView imageView3;
     private ImageView imageView4;
+
     @Override
     public int getLayoutResId() {
         return R.layout.fragment_smart_tourism;
@@ -31,9 +32,7 @@ public class Smart_tourismFragment extends BaseFragment {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 点击事件回调函数中启动目标Activity
-                Intent intent = new Intent(getActivity(), Tourism_Eat.class);
-                startActivity(intent);
+                startTargetActivity(Tourism_Eat.class);
             }
         });
 
@@ -41,36 +40,28 @@ public class Smart_tourismFragment extends BaseFragment {
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 点击事件回调函数中启动目标Activity
-                Intent intent = new Intent(getActivity(), Tourism_Live.class);
-                startActivity(intent);
+                startTargetActivity(Tourism_Live.class);
             }
         });
         imageView2 = rootView.findViewById(R.id.imageView5);
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 点击事件回调函数中启动目标Activity
-                Intent intent = new Intent(getActivity(), Tourism_Play.class);
-                startActivity(intent);
+                startTargetActivity(Tourism_Play.class);
             }
         });
         imageView3 = rootView.findViewById(R.id.imageView6);
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 点击事件回调函数中启动目标Activity
-                Intent intent = new Intent(getActivity(), Tourism_Amusement.class);
-                startActivity(intent);
+                startTargetActivity(Tourism_Amusement.class);
             }
         });
         imageView4 = rootView.findViewById(R.id.imageView7);
         imageView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 点击事件回调函数中启动目标Activity
-                Intent intent = new Intent(getActivity(), Tourism_Country.class);
-                startActivity(intent);
+                startTargetActivity(Tourism_Country.class);
             }
         });
     }
@@ -78,5 +69,10 @@ public class Smart_tourismFragment extends BaseFragment {
     @Override
     public void initData() {
         // 加载数据
+    }
+
+    private void startTargetActivity(Class<?> cls) {
+        Intent intent = new Intent(getActivity(), cls);
+        startActivity(intent);
     }
 }
