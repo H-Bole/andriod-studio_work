@@ -15,6 +15,7 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 
+import com.example.app_huangbowei.MyOrderActivity;
 import com.example.app_huangbowei.User_LoginActivity;
 import com.example.app_huangbowei.R;
 import com.example.app_huangbowei.User_RegisterActivity;
@@ -80,6 +81,16 @@ public class User_centerFragment extends BaseFragment {
                 registerLauncher.launch(intent);
             }
         });
+        Button btnMyOrder = rootView.findViewById(R.id.btn_my_order);
+        btnMyOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 打开我的订单界面
+                Intent intent = new Intent(getActivity(), MyOrderActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // 读取SharedPreferences中保存的昵称和账号，如果存在则显示在界面上
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("user_info", Context.MODE_PRIVATE);
         String nickname = sharedPreferences.getString("nickname", "");

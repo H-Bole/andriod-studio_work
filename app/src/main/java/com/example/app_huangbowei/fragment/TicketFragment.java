@@ -1,6 +1,8 @@
 package com.example.app_huangbowei.fragment;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -93,6 +95,14 @@ public class TicketFragment extends BaseFragment {
                 tvRemainingTicketsCount.setText(String.valueOf(remainingTickets));
                 // 弹出购票成功的提示
                 Toast.makeText(getActivity(), "购票成功", Toast.LENGTH_SHORT).show();
+
+                // 保存购票信息到SharedPreferences中
+                SharedPreferences sp = getActivity().getSharedPreferences("ticket_info", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sp.edit();
+                editor.putString("date", tvBirthday.getText().toString()); // 保存日期
+                editor.putInt("quantity", quantity); // 保存数量
+                editor.putInt("time_slot", rgTimeSlot.getCheckedRadioButtonId()); // 保存时间段
+                editor.apply();
             }
         });
     }
