@@ -7,11 +7,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class MyOrderActivity extends AppCompatActivity {
+public class User_OrderActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_order);
+        getSupportActionBar().hide();
 
         // 读取SharedPreferences中保存的购票信息
         SharedPreferences sp = getSharedPreferences("ticket_info", Context.MODE_PRIVATE);

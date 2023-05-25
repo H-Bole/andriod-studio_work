@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/newsimg"
+        android:id="@+id/nimg"
         android:layout_width="109dp"
         android:layout_height="109dp"
         android:layout_marginStart="16dp"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/nneirong"
+        android:id="@+id/ncontent"
         android:layout_width="246dp"
         android:layout_height="75dp"
         android:layout_marginStart="16dp"
@@ -26,11 +26,11 @@
         android:textSize="15dp"
         android:lines="3"
         android:ellipsize="end"
-        app:layout_constraintStart_toStartOf="@+id/nbiaoti"
-        app:layout_constraintTop_toBottomOf="@+id/nbiaoti" />
+        app:layout_constraintStart_toStartOf="@+id/ntitle"
+        app:layout_constraintTop_toBottomOf="@+id/ntitle" />
 
     <TextView
-        android:id="@+id/nbiaoti"
+        android:id="@+id/ntitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -40,7 +40,7 @@
         android:clickable="true"
         android:ellipsize="end"
         android:lines="1"
-        app:layout_constraintStart_toEndOf="@+id/newsimg"
-        app:layout_constraintTop_toTopOf="@+id/newsimg" />
+        app:layout_constraintStart_toEndOf="@+id/nimg"
+        app:layout_constraintTop_toTopOf="@+id/nimg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

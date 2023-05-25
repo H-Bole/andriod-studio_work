@@ -25,34 +25,20 @@ public class User_RegisterActivity extends AppCompatActivity {
 
     private EditText accountEditText;
     private EditText passwordEditText;
-//    新方法
     private CheckBox cb1, cb2, cb3, cb4; //声明四个CheckBox对象
     private TextView tvBirthday; // 出生年月日显示文本框
     private Button btnSelectDate; // 选择日期按钮
-    // 定义日期选择对话框变量
-    private DatePickerDialog datePickerDialog;
-
-    // 定义日历变量，用于获取当前日期
-    private Calendar calendar;
-    private RadioGroup rgGender; // 性别单选按钮组
-    private RadioButton rbMale; // 男性单选按钮
-    private RadioButton rbFemale; // 女性单选按钮
+    private DatePickerDialog datePickerDialog; // 定义日期选择对话框变量
+    private Calendar calendar; // 定义日历变量，用于获取当前日期
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         getSupportActionBar().hide();
-        //时间选择器
-        tvBirthday = findViewById(R.id.tvBirthday);
-        btnSelectDate=findViewById(R.id.btnSelectDate);
-        //获取布局文件中的CheckBox控件
-        cb1 = findViewById(R.id.cb_1);
-        cb2 = findViewById(R.id.cb_2);
-        cb3 = findViewById(R.id.cb_3);
-        cb4 = findViewById(R.id.cb_4);
-        // 初始化日历变量，获取当前日期
-        calendar = Calendar.getInstance();
+
+        // 初始化控件
+        initView();
 
         // 设置出生年月日显示文本框的默认值为当前日期，格式为年/月/日
         tvBirthday.setText(calendar.get(Calendar.YEAR) + "/" + (calendar.get(Calendar.MONTH) + 1) + "/" + calendar.get(Calendar.DAY_OF_MONTH));
@@ -73,64 +59,21 @@ public class User_RegisterActivity extends AppCompatActivity {
             }
         });
 
-        //设置默认选中第一个和第二个选项
+        // 设置默认选中第一个和第二个选项
         cb1.setChecked(true);
         cb2.setChecked(true);
 
-        //为每个CheckBox设置点击监听器
-        cb1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //判断是否被选中，并弹出提示信息
-                if (cb1.isChecked()) {
-                    Toast.makeText(User_RegisterActivity.this, "你选择了" + cb1.getText(), Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(User_RegisterActivity.this, "你取消了" + cb1.getText(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        // 为每个CheckBox设置点击监听器
+        setCheckBoxListener(cb1);
+        setCheckBoxListener(cb2);
+        setCheckBoxListener(cb3);
+        setCheckBoxListener(cb4);
 
-        cb2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (cb2.isChecked()) {
-                    Toast.makeText(User_RegisterActivity.this, "你选择了" + cb2.getText(), Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(User_RegisterActivity.this, "你取消了" + cb2.getText(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-        cb3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (cb3.isChecked()) {
-                    Toast.makeText(User_RegisterActivity.this, "你选择了" + cb3.getText(), Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(User_RegisterActivity.this, "你取消了" + cb3.getText(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-        cb4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (cb4.isChecked()) {
-                    Toast.makeText(User_RegisterActivity.this, "你选择了" + cb4.getText(), Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(User_RegisterActivity.this, "你取消了" + cb4.getText(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-        accountEditText = findViewById(R.id.account_edittext1);
-        passwordEditText = findViewById(R.id.password_edittext1);
-
+        // 注册按钮点击事件
         Button registerButton = findViewById(R.id.button_register);
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String account = accountEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
 
@@ -142,19 +85,47 @@ public class User_RegisterActivity extends AppCompatActivity {
                 editor.putString("nickname", "未登录"); // 设置昵称为"未登录"
                 editor.apply();
 
-
                 // 返回账号和密码到LoginActivity中
                 Intent intent = new Intent(User_RegisterActivity.this, User_LoginActivity.class);
                 intent.putExtra("account", account);
                 intent.putExtra("password", password);
                 startActivity(intent);
+
                 // 返回账号和密码到User_centerFragment中
                 Intent intent1 = new Intent(User_RegisterActivity.this,User_centerFragment.class);
                 intent1.putExtra("account", account);
                 intent1.putExtra("nickname", "未登录");
                 setResult(RESULT_OK, intent1);
+
                 Toast.makeText(User_RegisterActivity.this, "注册成功！", Toast.LENGTH_LONG).show();
                 finish();
+            }
+        });
+    }
+
+    // 初始化控件
+    private void initView() {
+        accountEditText = findViewById(R.id.account_edittext1);
+        passwordEditText = findViewById(R.id.password_edittext1);
+        tvBirthday = findViewById(R.id.tvBirthday);
+        btnSelectDate=findViewById(R.id.btnSelectDate);
+        cb1 = findViewById(R.id.cb_1);
+        cb2 = findViewById(R.id.cb_2);
+        cb3 = findViewById(R.id.cb_3);
+        cb4 = findViewById(R.id.cb_4);
+        calendar = Calendar.getInstance(); // 初始化日历变量，获取当前日期
+    }
+
+    // 为CheckBox设置点击监听器
+    private void setCheckBoxListener(CheckBox checkBox) {
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (checkBox.isChecked()) {
+                    Toast.makeText(User_RegisterActivity.this, "你选择了" + checkBox.getText(), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(User_RegisterActivity.this, "你取消了" + checkBox.getText(), Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

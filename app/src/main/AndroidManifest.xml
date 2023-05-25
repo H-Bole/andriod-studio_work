@@ -12,7 +12,7 @@
         android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar.Bridge"
         tools:targetApi="31">
         <activity
-            android:name=".MyOrderActivity"
+            android:name=".User_OrderActivity"
             android:exported="false" />
         <activity
             android:name=".Tourism_Country"

@@ -15,7 +15,7 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 
-import com.example.app_huangbowei.MyOrderActivity;
+import com.example.app_huangbowei.User_OrderActivity;
 import com.example.app_huangbowei.User_LoginActivity;
 import com.example.app_huangbowei.R;
 import com.example.app_huangbowei.User_RegisterActivity;
@@ -86,7 +86,7 @@ public class User_centerFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 // 打开我的订单界面
-                Intent intent = new Intent(getActivity(), MyOrderActivity.class);
+                Intent intent = new Intent(getActivity(), User_OrderActivity.class);
                 startActivity(intent);
             }
         });
