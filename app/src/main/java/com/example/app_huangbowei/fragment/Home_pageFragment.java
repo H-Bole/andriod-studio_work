@@ -170,9 +170,5 @@ public class Home_pageFragment extends BaseFragment {
         }
     }
 
-
-
-    //以下是内部类（注意使用公共类）
-
 }
 
