@@ -10,8 +10,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +32,7 @@ public class User_RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.user_register);
         getSupportActionBar().hide();
 
         // 初始化控件

@@ -1,48 +1,49 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/user_order"
     android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="购票日期："
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_date"
-        android:textSize="16sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="购票数量："
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_quantity"
-        android:textSize="16sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="购票时间段："
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_time_slot"
-        android:textSize="16sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
 
 </LinearLayout>
