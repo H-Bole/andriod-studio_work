@@ -64,6 +64,72 @@ public class ActicityFragment extends BaseFragment {
                 });
             }
         });
+        imageView3 = rootView.findViewById(R.id.activity3_img);
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 加载另一个布局
+                View view = LayoutInflater.from(getContext()).inflate(R.layout.activity_3, null);
+                ViewGroup rootView = (ViewGroup) getView().getParent();
+                rootView.addView(view);
+
+                // 添加返回按钮的点击事件
+                Button backButton = view.findViewById(R.id.btn_activity3);
+                backButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // 返回原来的布局
+                        ViewGroup rootView = (ViewGroup) getView().getParent();
+                        rootView.removeViewAt(rootView.getChildCount() - 1);
+                    }
+                });
+            }
+        });
+
+        imageView4 = rootView.findViewById(R.id.activity4_img);
+        imageView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 加载另一个布局
+                View view = LayoutInflater.from(getContext()).inflate(R.layout.activity_4, null);
+                ViewGroup rootView = (ViewGroup) getView().getParent();
+                rootView.addView(view);
+
+                // 添加返回按钮的点击事件
+                Button backButton = view.findViewById(R.id.btn_activity4);
+                backButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // 返回原来的布局
+                        ViewGroup rootView = (ViewGroup) getView().getParent();
+                        rootView.removeViewAt(rootView.getChildCount() - 1);
+                    }
+                });
+            }
+        });
+
+        imageView5 = rootView.findViewById(R.id.activity5_img);
+        imageView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 加载另一个布局
+                View view = LayoutInflater.from(getContext()).inflate(R.layout.activity_5, null);
+                ViewGroup rootView = (ViewGroup) getView().getParent();
+                rootView.addView(view);
+
+                // 添加返回按钮的点击事件
+                Button backButton = view.findViewById(R.id.btn_activity5);
+                backButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // 返回原来的布局
+                        ViewGroup rootView = (ViewGroup) getView().getParent();
+                        rootView.removeViewAt(rootView.getChildCount() - 1);
+                    }
+                });
+            }
+        });
+
     }
 
 

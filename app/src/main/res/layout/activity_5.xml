@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tourism_Live">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <Button
+                    android:id="@+id/btn_activity5"
+                    android:layout_width="35dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/back1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/activity5_img"
+                    android:layout_width="190dp"
+                    android:layout_height="146dp"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/activity_title5" />
+
+                <TextView
+                    android:id="@+id/activity5_text"
+                    android:layout_width="172dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="16dp"
+                    android:text="重阳登高去哪儿？都江堰这4个登高好去处，秋意正浓，全家出游上翠微~"
+                    android:textColor="#020202"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/activity5_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/activity5_text3"
+                    android:layout_width="144dp"
+                    android:layout_height="37dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="活动时间：2018-10-15至2018-10-15"
+                    android:textColor="#020202"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/activity5_text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:text="活动详情"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="match_parent"
+                android:layout_height="7400dp"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/activity_5" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity_end"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/end_text"
+                    android:layout_width="78dp"
+                    android:layout_height="19dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center_horizontal"
+                    android:text="滑到底啦！"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
