@@ -13,7 +13,7 @@
 
 ## 如何使用
 
-请下载并安装 [Release](https://github.com/H-Bole/Picture-home/blob/main/Andriod/your_app.apk) 安装包进行体验。
+请下载并安装 [Release](https://github.com/H-Bole/andriod-studio_work/releases/tag/1.0.0) 安装包进行体验。
 
 ## 截图
 
