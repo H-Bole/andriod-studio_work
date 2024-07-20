@@ -15,33 +15,33 @@
 
 ### 启动页模块
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/启动页.gif" alt="启动页" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/启动页.gif" alt="启动页" width="250px">
 </div>
 
 ### 首页模块
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/概况.gif" alt="概况" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/初识度假区.gif" alt="初识度假区" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/精彩活动.gif" alt="精彩活动" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/购票.gif" alt="购票" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/概况.gif" alt="概况" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/初识度假区.gif" alt="初识度假区" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/精彩活动.gif" alt="精彩活动" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/购票.gif" alt="购票" width="250px">
 </div>
 
 ### 智游模块
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/吃.gif" alt="吃" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/娱.gif" alt="娱" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/游.gif" alt="游" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/行.gif" alt="行" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/吃.gif" alt="吃" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/娱.gif" alt="娱" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/游.gif" alt="游" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/行.gif" alt="行" width="250px">
 </div>
 
 ### 个人中心模块
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/注册.gif" alt="注册" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/登录.gif" alt="登录" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/我的订单.gif" alt="订单" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/注册.gif" alt="注册" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/登录.gif" alt="登录" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/我的订单.gif" alt="订单" width="250px">
 </div>
 
 ## 技术栈
