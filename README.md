@@ -1,7 +1,3 @@
-# 安卓期末大作业
-
-这个项目是我在数字媒体技术专业大二下学期的安卓课程的期末大作业。它是一个普通的安卓应用，旨在展示我在安卓开发方面的学习成果。
-
 ## 项目简介
 
 该应用包含了启动页、首页、智游和个人中心四大模块。其中，首页、智游和个人中心三大模块构成了主程序模块。
@@ -18,41 +14,40 @@
 ## 截图
 
 ### 启动页模块
-
 <div align="center">
-  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/启动页.gif" alt="启动页" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/启动页.gif" alt="启动页" width="250px">
 </div>
 
 ### 首页模块
 
 <div align="center">
-  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/概况.gif" alt="概况" width="250px">
-  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/初识度假区.gif" alt="初识度假区" width="250px">
-  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/精彩活动.gif" alt="精彩活动" width="250px">
-  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/购票.gif" alt="购票" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/概况.gif" alt="概况" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/初识度假区.gif" alt="初识度假区" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/精彩活动.gif" alt="精彩活动" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/购票.gif" alt="购票" width="250px">
 </div>
 
 ### 智游模块
 
 <div align="center">
-  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/吃.gif" alt="吃" width="250px">
-  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/娱.gif" alt="娱" width="250px">
-  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/游.gif" alt="游" width="250px">
-  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/行.gif" alt="行" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/吃.gif" alt="吃" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/娱.gif" alt="娱" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/游.gif" alt="游" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/行.gif" alt="行" width="250px">
 </div>
 
 ### 个人中心模块
 
 <div align="center">
-  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/注册.gif" alt="注册" width="250px">
-  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/登录.gif" alt="登录" width="250px">
-  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/我的订单.gif" alt="订单" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/注册.gif" alt="注册" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/登录.gif" alt="登录" width="250px">
+  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home/Andriod/我的订单.gif" alt="订单" width="250px">
 </div>
 
 ## 技术栈
 
-- Java
-- Android SDK
+- ![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white) Java
+- ![Android SDK](https://img.shields.io/badge/Android%20SDK-3DDC84?style=for-the-badge&logo=android&logoColor=white) Android SDK
 
 ## 许可证
 
