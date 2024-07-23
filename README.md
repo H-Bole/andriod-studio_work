@@ -15,34 +15,34 @@
 
 ### 启动页模块
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/start.gif" alt="启动页" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/start.gif" alt="启动页" width="250px">
 </div>
 
 ### 首页模块
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/summary.gif" alt="概况" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/first.gif" alt="初识度假区" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/activity.gif" alt="精彩活动" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/buy.gif" alt="购票" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/summary.gif" alt="概况" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/first.gif" alt="初识度假区" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/activity.gif" alt="精彩活动" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/buy.gif" alt="购票" width="250px">
 </div>
 
 ### 智游模块
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/eat.gif" alt="吃" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/fun.gif" alt="娱" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/swim.gif" alt="游" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/go.gif" alt="行" width="250px">
-   <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/live.gif" alt="住" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/eat.gif" alt="吃" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/fun.gif" alt="娱" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/swim.gif" alt="游" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/go.gif" alt="行" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/live.gif" alt="住" width="250px">
 </div>
 
 ### 个人中心模块
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/reset.gif" alt="注册" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/login.gif" alt="登录" width="250px">
-  <img src="https://cdn.jsdelivr.net/gh/H-Bole/Picture-home@main/Andriod/my.gif" alt="订单" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/reset.gif" alt="注册" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/login.gif" alt="登录" width="250px">
+  <img src="https://github.com/H-Bole/Picture-home/blob/main/Andriod/my.gif" alt="订单" width="250px">
 </div>
 
 ## 技术栈
